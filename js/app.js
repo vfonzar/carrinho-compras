@@ -10,10 +10,8 @@ const modalQuantidadeInput = document.getElementById("modal-quantidade");
 const modalSalvar = document.getElementById("modal-salvar");
 const modalFechar = document.getElementById("modal-fechar");
 
-// Carrinho inicial
-let carrinho = [
-    { nome: "Celular", preco: 1400, quantidade: 1 }
-];
+// Carrinho inicial vazio
+let carrinho = [];
 
 let itemEditandoIndex = null;
 
@@ -40,7 +38,7 @@ function atualizarCarrinho() {
         total += produto.preco * produto.quantidade;
     });
 
-    valorTotal.textContent = `R$${total}`;
+    valorTotal.textContent = `R$ ${total}`;
 }
 
 // Função para adicionar produto ao carrinho
