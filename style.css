@@ -1,0 +1,494 @@
+/* Definição de variáveis de cores no CSS */
+:root {
+  --primary-blue: #1875E8;
+  --dark-blue: #01080E;
+  --light-gray: #AAAAAA;
+  --Light-Blue: #1875E8;
+  --Void: #01080E;
+  --hover-red: #FF0000;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(to bottom,
+      var(--dark-blue) 10%,
+      var(--white) 10%,
+      var(--white) 90%,
+      var(--dark-blue) 90%);
+  padding: 7vh 8vw 5vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+
+button {
+  background: inherit;
+  color: inherit;
+  border: 0;
+}
+
+select {
+  appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+.texto-medio-azul {
+  color: var(--Light-Blue, #1875E8);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 1.65rem */
+}
+
+.conteudo-principal {
+  filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
+  min-height: 100%;
+  padding: 5rem 6.5rem;
+  
+  display: grid;
+  grid-template-columns: 1.375fr 1fr;
+  column-gap: 5rem;
+
+  background: var(--white) url('./assets/oculos.png') no-repeat bottom left;
+  background-size: auto 40%;
+
+  position: relative;
+  background-position: left bottom -40px;
+}
+
+.grafismo-azul {
+  position: absolute;
+  width: 31.9375rem;
+  height: 2.0625rem;
+  background-image: url('./assets/grafismo-azul.svg');
+  top: -1rem;
+}
+
+.titulo {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.texto-azul {
+  color: var(--primary-blue);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.formulario .campo-grupo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.produto-input {
+  width: 24.75rem;
+  height: 3.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-Blue);
+
+  color: var(--Void);
+  font-family: Inter;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+  
+  background: url('./assets/arrow-down.svg') no-repeat right 1rem top 50%;
+}
+
+.dropdown {
+  width: 3.375rem;
+  height: 3.5rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  border: 1px solid var(--Light-Blue);
+  cursor: pointer;
+}
+
+.formulario > .parte-inferior {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.quantidade-input {
+  display: flex;
+  height: 3.5rem;
+  padding: 1rem;
+  width: 4.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-Blue);
+
+  color: var(--Void);
+  font-family: Inter;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.botoes-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.botao-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 3.25rem;
+  padding: 1rem 1.5rem;
+  gap: 0.625rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.botao-adicionar {
+  background: var(--Light-Blue);
+  box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.50);
+
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.botao-limpar {
+  border-radius: 1rem;
+  background: var(--Void);
+  box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
+
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.carrinho {
+  display: flex;
+  width: 24rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.titulo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carrinho__titulo {
+  color: var(--Light-Blue);
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 1.65rem */
+}
+
+.carrinho__produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.carrinho__produtos__produto {
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%; /* 1.44375rem */
+}
+
+.divisoria {
+  width: 24rem;
+  height: 0.0625rem;
+  background: var(--black);
+}
+
+.carrinho__total {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 110%; /* 2.475rem */
+}
+
+.adicionar-produto {
+  padding-bottom: 180px;
+}
+
+.remover-produto {
+  background: none;
+  border: none;
+  color: var(--light-gray);
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remover-produto:hover {
+  color: var(--hover-red);
+}
+
+.modal {
+  display: none;
+  position: fixed; /* Fixado na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garantir que fique acima de tudo */
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  z-index: 1001; /* Fica acima do fundo */
+}
+
+/* Campo de quantidade dentro do modal */
+#modal-quantidade {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+  padding: 1rem;
+  width: 4.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-blue);
+  color: var(--dark-blue);
+}
+
+.modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Ajustando tamanho e estilo dos botões do modal */
+.modal-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Ajustando o alinhamento do texto nos botões do modal */
+.botao-salvar,
+.botao-fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px; /* Mantendo um tamanho padrão */
+  height: 3.25rem;
+  padding: 0; /* Removendo padding extra */
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: normal; /* Evita desnível no texto */
+}
+
+.botao-salvar {
+  background: var(--primary-blue);
+  color: var(--white);
+  box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.50);
+}
+
+.botao-fechar {
+  background: var(--light-gray);
+  color: var(--black);
+}
+
+.editar-produto {
+  background: none;
+  border: none;
+  color: var(--light-gray); /* Cor do lápis */
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px; /* Espaço entre o lápis e o número */
+  visibility: hidden; /* Agora o espaço fica reservado */
+}
+
+.editar-produto:hover {
+  color: var(--primary-blue); /* Cor do lápis ao passar o mouse */
+}
+
+/* Mostrar o lápis ao passar o mouse no item do carrinho */
+.carrinho__produtos__produto:hover .editar-produto {
+  visibility: visible;
+  /* color: var(--primary-blue); */
+}
+
+.remover-produto {
+  background: none;
+  border: none;
+  color: var(--light-gray);
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remover-produto:hover {
+  color: var(--hover-red);
+}
+
+/* Ajuste do layout dos produtos no carrinho */
+.carrinho__produtos__produto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 0;
+  position: relative;
+}
+
+/* Exibir lápis ao passar o mouse */
+.carrinho__produtos__produto:hover .editar-produto {
+  display: inline;
+}
+
+/* Estilização dos inputs numéricos */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: center;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+  padding: 1rem;
+  width: 4.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-blue);
+  color: var(--dark-blue);
+}
+
+/* Ajuste das setas pequenas para aumentar/diminuir a quantidade */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: auto;
+  width: 14px;
+  height: 14px;
+  margin: 0rem;
+}
+
+/* Criando botões discretos para aumentar/diminuir a quantidade */
+.quantidade-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+/* Ajustando o input para ficar no centro */
+#modal-quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+  padding: 1rem;
+  width: 5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-blue);
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+/* Botões de incremento e decremento */
+.quantidade-btn {
+  background: none;
+  border: none;
+  color: var(--light-gray);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.quantidade-btn:hover {
+  color: var(--primary-blue);
+}
+
+/* Ajustando a seta no campo de quantidade FORA do modal */
+.quantidade-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 110%;
+  padding: 5rem;
+  width: 4.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-blue);
+  color: var(--dark-blue);
+  text-align: center;
+  padding-right: 2rem; /* Garantindo o mesmo espaço do modal */
+}
+
+/* Ajustando o tamanho e espaçamento das setas dentro do campo "Qtde." fora do modal */
+.quantidade-input::-webkit-inner-spin-button,
+.quantidade-input::-webkit-outer-spin-button {
+  width: 18px; /* Tamanho idêntico ao do modal */
+  height: 18px;
+  margin-left: 6px; /* Mantendo a mesma distância entre o número e as setas */
+}
+
+/* Ajustando hover para manter consistência */
+.quantidade-input:hover {
+  border-color: var(--primary-blue);
+}
