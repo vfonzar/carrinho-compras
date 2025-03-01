@@ -51,10 +51,10 @@ cd carrinho-compras
 
 🛠️ Funcionalidades
 
-✔️ Gera um número aleatório secreto a cada partida
-✔️ Informa ao jogador se o número digitado é maior ou menor que o correto
-✔️ Interface simples e intuitiva
-✔️ Fácil de rodar localmente, sem necessidade de instalações adicionais
+    ✔️ Gera um número aleatório secreto a cada partida
+    ✔️ Informa ao jogador se o número digitado é maior ou menor que o correto
+    ✔️ Interface simples e intuitiva
+    ✔️ Fácil de rodar localmente, sem necessidade de instalações adicionais
 
 🤝 Contribuindo
 
